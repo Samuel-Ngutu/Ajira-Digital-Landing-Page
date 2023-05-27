@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AJIRA DIGITAL</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .tabs {
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+    
+    .tab {
+      display: inline-block;
+      margin-right: 10px;
+      padding: 10px 20px;
+      border-radius: 5px 5px 0 0;
+      cursor: pointer;
+    }
+    
+    .content {
+      background-color: #ffffff;
+      padding: 20px;
+    }
+    
+    #Home {
+      background-color: #ffd700;
+    }
+    
+    #Services {
+      background-color: #00bfff;
+    }
+    
+    #Portfolio {
+      background-color: #ff69b4;
+    }
+    
+    #Contact Us {
+      background-color: #32cd32;
+    }
+  </style>
+</head>
+<body>
+  <div class="tabs">
+    <div class="tab" id="Home" onclick="showContent('content1')">Tab 1</div>
+    <div class="tab" id="Services" onclick="showContent('content2')">Tab 2</div>
+    <div class="tab" id="Portfolio" onclick="showContent('content3')">Tab 3</div>
+    <div class="tab" id="Contact Us" onclick="showContent('content4')">Tab 4</div>
+  </div>
+  
+  <div class="content" id="Home">
+    <h2>Home</h2>
+    <p>Ajira Digital initiative provides free access to digital skills training and vacancies for young Kenyans. The program has helped place over 8,000 youth in jobs with leading companies in the country.</p>
+  </div>
+  
+  <div class="content" id="Services" style="display: none;">
+    <h2>Services</h2>
+    <p> The Ajira Digital Programme can help you determine if online work is for you.
+      Access to dignified work.
+      Access to Infrastructure.
+      Education and Skills for the dynamic, always changing online jobs. </p>
+  </div>
+  
+  <div class="content" id="Portfolio" style="display: none;">
+    <h2>Portfolio</h2>
+    <p>The AJIRA Digital Program is a ground-breaking initiative driven by the Ministry of ICT, Innovation and Digital Economy (MoICTDE) with a mission to empower over 1 million young Kenyans annually with digital and digitally enabled skills to enable enabling them to earn a living through freelancing opportunities.
+
+      Our goal is to position Kenya as a leading labour destination and a Business Process Outsourcing Hub for multinational companies, while encouraging local companies and the public sector to create digital work.</p>
+  </div>
+  
+  <div class="content" id="ContactUs" style="display: none;">
+    <h2>Contact Us</h2>
+    <p>We value your feedback, comments and any questions.
+
+      P.O Box 939-00606, Sarit Center, Nairobi</p>
+  </div>
+  
+  <script>
+    function showContent(contentId) {
+      // Hide all content divs
+      var contents = document.getElementsByClassName("content");
+      for (var i = 0; i < contents.length; i++) {
+        contents[i].style.display = "none";
+      }
+      
+      // Show the selected content div
+      var selectedContent = document.getElementById(contentId);
+      selectedContent.style.display = "block";
+    }
+  </script>
+</body>
+</html>
